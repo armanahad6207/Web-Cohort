@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contactCard{
+   width: 30%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px 12px;
+    position: relative;
+    perspective: 1000px;
+   
+    
+    
+}
+
+
+
+
+
+
+.contactCard h1{
+    font-size: 2vw;
+    letter-spacing: -2px;
+    font-weight: 700;
+    transform: rotateX(20deg);
+    box-shadow: 0 4px 6px #a09f9f;
+    padding: 10px 12px;
+   
+}
+.contactCard form{
+display: flex;
+
+flex-direction: column;
+gap: 30px;
+width: 80%;
+
+}
+.contactCard label {
+    display: block;
+    font-size: 18px;
+    color: rgb(66, 66, 66);
+   
+
+}
+.form-group input,textarea{
+    width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+    
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in;
+    
+}
+button:hover{
+    box-shadow: 0px 4px 10px #4397f2 ;
+    animation: pulse 1.5s ease-in infinite;
+    transform: rotateX(20deg);
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.form-group{
+    line-height: 30px;
+    
+}
+input:focus, textarea:focus{
+
+outline: none;
+ border-color: #007bff;
+   box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+
+
+  

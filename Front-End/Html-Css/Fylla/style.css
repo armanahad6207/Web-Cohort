@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  padding: 12px;
+}
+
+main {
+  height: 100%;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+main nav {
+  height: 12%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #000;
+  padding: 12px 0px;
+}
+main nav .nav-left {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main nav .nav-left img {
+  height: 4rem;
+  width: 4rem;
+}
+main nav .nav-left h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+main nav .nav-right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+main nav .nav-right i {
+  font-size: 3.2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+main .hero {
+  width: 100%;
+  padding: 25px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .hero p {
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+main .hero h1 {
+  font-size: 4rem;
+  width: 60%;
+  line-height: 4rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+main .hero img {
+  width: 100%;
+  height: 44vw;
+  border-radius: 18px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .values .value {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 0px;
+}
+main .values .value p {
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+main .values .value h1 {
+  font-size: 3rem;
+  width: 100%;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+main .values .value button {
+  width: 11rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 0px;
+  text-transform: uppercase;
+  word-spacing: 6px;
+}
+
+@media (min-width: 1024px) {
+  main .hero h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

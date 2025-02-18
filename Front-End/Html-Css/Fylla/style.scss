@@ -31,7 +31,7 @@ main {
   height: 100%;
   border: 1px solid #000;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 40px;
 
   // navbar start
   nav {
@@ -41,7 +41,7 @@ main {
     align-items: center;
     gap: 20px;
     border-bottom: 2px solid #000;
-    padding: 12px 0px;
+    padding: 30px 0px;
 
     .nav-left {
       width: 60%;
@@ -173,7 +173,6 @@ main {
 
   // our teat Start
   .team {
-    width: 100%;
     padding: 1rem 0rem;
     .title {
       display: flex;
@@ -194,21 +193,17 @@ main {
     }
     .team-video {
       padding: 3rem 0rem;
-     display:grid;
-       gap: 2rem;
+      display: grid;
+      gap: 2rem;
 
       .video {
         width: 100%;
-       
-       
-       
 
-        video{
-          width:100%;
-          height:80%;
+        video {
+          width: 100%;
+          height: 80%;
         }
-       
-        
+
         h1 {
           font-weight: 400;
           font-size: 1.8rem;
@@ -220,105 +215,112 @@ main {
         }
       }
     }
-  }// our teat End
+  } // our teat End
   // brand start
-.brand{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  border-top:2px solid #0009;
-  .left-brand{
+  .brand {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
-    padding: 1rem 0rem 0rem  0rem;
-    svg {
-      height: 5rem;
-      width: 5.5rem;
+    gap: 2rem;
+    border-top: 2px solid #0009;
+    .left-brand {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+      padding: 1rem 0rem 0rem 0rem;
+      svg {
+        height: 5rem;
+        width: 5.5rem;
+      }
+      .text {
+        width: 90%;
+        p {
+          text-transform: uppercase;
+          opacity: 0.8;
+          padding-bottom: 10px;
+        }
+        h1 {
+          line-height: 3.3rem;
+          font-size: 3rem;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
     }
-    .text{
-      width: 90%;
+    .right-brand {
+      padding: 0rem 0rem 2rem 0rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
       p {
-        text-transform: uppercase;
-        opacity: 0.8;
-        padding-bottom: 10px;
+        opacity: 0.9;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
       }
-      h1 {
-        line-height: 3.3rem;
-        font-size: 3rem;
-        font-weight: 600;
+      button {
+        width: 11rem;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        text-align: center;
+        padding: 8px 0px;
         text-transform: uppercase;
+        word-spacing: 6px;
       }
-      
+    }
+  } // brand end
+  footer {
+    width: 100%;
+    padding: 2rem 0rem;
+    border-top: 2px solid #000;
+    .left-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .right-footer {
+      .desc {
+        border-top: 2px solid #000;
+        margin: 2rem 0rem;
+        padding: 2rem 0rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   }
-  .right-brand{
-    padding: 0rem 0rem 2rem 0rem;
+  .copyright {
+    border-top: 2px solid #000;
+    padding: 3rem 0rem;
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
-   
-    p{
-      opacity: .9;
+    justify-content: space-between;
+    h3 {
       font-size: 1.2rem;
-      line-height: 1.5rem;
-    }
-    button {
-      width: 11rem;
-      background-color: #000;
-      color: #fff;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 8px;
-      text-align: center;
-      padding: 8px 0px;
+      color: #0009;
       text-transform: uppercase;
-      word-spacing: 6px;
-    }
-  }
- 
-}// brand end
-footer{
-  
-  width:100%;
-  padding:2rem 0rem;
-  border-top:2px solid #000;
-  .left-footer{
-    display: flex;
-    flex-direction:column;
-    gap:3rem;
-  
-  }
-  .right-footer{
-  
-    .desc{
-      border-top:2px solid #000;
-      margin:2rem 0rem;
-      padding:2rem 0rem;
-        display:flex;
-        flex-direction:column;
-        gap:1rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      word-spacing: 10px;
+      a {
+        color: #0009;
+      }
     }
   }
 }
-.copyright{
-  border-top:2px solid #000;
-  h3{
-    font-size:7rem;
-    color:#0009:
-  }
-}
-}
-
-
-
-
-
 
 @media (min-width: 1024px) {
   main {
+    nav{
+      .nav-right{
+        i{
+        display:none;
+        }
+      }
+    }
     .hero {
       h1 {
         font-size: 9rem;
@@ -378,21 +380,18 @@ footer{
       display: flex;
       width: 100%;
       border-top: 1px solid #000;
-    
-  
+      position: relative;
+
       .title {
-      
-        
         width: 40%;
-      
+        position: sticky;
+        top: 100px;
         border-right: 1px solid #0009;
         margin: 3rem 3rem 1rem 0rem;
-        border-bottom:none;
+        border-bottom: none;
         h1 {
-          font-size: 6rem ;
-         
+          font-size: 6rem;
           line-height: 6rem;
-      
         }
         p {
           font-size: 1.5rem;
@@ -405,70 +404,60 @@ footer{
         grid-template-columns: auto auto;
       }
     }
-    .brand{
-  
-      padding:2rem 0rem;
+    .brand {
+      padding: 2rem 0rem;
       flex-direction: row;
-    
-      .left-brand{
-        width:70%;
-       
-        flex-direction:column-reverse;
+
+      .left-brand {
+        width: 70%;
+
+        flex-direction: column-reverse;
         justify-content: space-between;
         gap: 15rem;
-        border-right:2px solid #0009;
+        border-right: 2px solid #0009;
         svg {
           height: 8rem;
           width: 7.5rem;
         }
-       .text{
-        h1{
-          font-size:6rem;
-          line-height: 7.2rem;
-          font-weight:400;
+        .text {
+          h1 {
+            font-size: 6rem;
+            line-height: 7.2rem;
+            font-weight: 400;
+          }
+          p {
+            font-size: 2rem;
+          }
         }
-        p{
-          font-size:2rem;
-        }
-       }
       }
-      .right-brand{
-        padding:0rem 0rem;
-        width:30%;
-      
+      .right-brand {
+        padding: 0rem 0rem;
+        width: 30%;
+
         justify-content: space-between;
-        p{
-          
-          font-size:2.1rem;
+        p {
+          font-size: 2.1rem;
           line-height: 3rem;
-          font-weight:300;
+          font-weight: 300;
         }
-        
       }
     }
-    footer{
+    footer {
       display: flex;
-      gap:2rem;
-      .left-footer{
-       width: 40%;
-       border-right: 2px solid #0009;
+      gap: 2rem;
+      .left-footer {
+        width: 40%;
+        border-right: 2px solid #0009;
       }
-      .right-footer{
-
+      .right-footer {
         width: 60%;
-        display:flex;
+        display: flex;
         justify-content: space-between;
-     
-        .desc{
-        
-          border-top:none;
+
+        .desc {
+          border-top: none;
         }
       }
     }
   }
 }
-
-
-
-
-

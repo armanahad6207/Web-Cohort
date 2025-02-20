@@ -5,7 +5,8 @@
   font-family: sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -14,7 +15,7 @@ html, body {
   width: 100%;
   min-height: auto;
   background-color: #0e0e0e;
-  padding: 0px 14px;
+  padding: 20px 14px;
   color: rgb(218, 197, 167);
 }
 .main .hero {
@@ -24,10 +25,12 @@ html, body {
   padding-top: 20px;
 }
 .main .hero img {
-  width: 35%;
+  width: clamp(209px, 19vw + 209px, 450px);
+  aspect-ratio: 3/4;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 1;
+  animation: imageAnimate 1.3s ease 0.7s forwards;
 }
 @keyframes imageAnimate {
   0% {
@@ -38,12 +41,15 @@ html, body {
     opacity: 1;
   }
 }
+.main .hero .title {
+  padding: 20px 0px;
+}
 .main .hero .title h3 {
   font-family: "Gambetta Light Italic", "Gambetta Light Italic Placeholder", sans-serif;
-  font-size: 3.3rem;
+  font-size: clamp(45px, 6vw + 45px, 118px);
   text-align: center;
   font-weight: 400;
-  line-height: 55px;
+  line-height: 80px;
   opacity: 1;
   transition: all ease;
 }
@@ -78,11 +84,54 @@ html, body {
     scale: 1;
   }
 }
+.main .services {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.main .services i {
+  border: 1px solid rgb(218, 197, 167);
+  padding: 12px 13px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background-color: #181716;
+}
+.main .services i:hover {
+  background-color: #393430;
+  cursor: pointer;
+}
+.main .services span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.main .x-scroll {
+  width: 100%;
+  background-color: red;
+  margin: 1rem 0rem;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+}
+.main .x-scroll .scroll-wraper {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem 3rem;
+  border: 2px solid green;
+  animation: scrollAnimate 10s linear infinite;
+  white-space: nowrap;
+}
+@keyframes scrollAnimate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 @media (min-width: 620px) {
-  html {
-    font-size: clamp(19px, 1vw, 22px);
-  }
   .hero .title h3:nth-child(1) {
     display: inline;
     padding-right: 10px;
@@ -92,10 +141,6 @@ html, body {
   }
   .hero .title h3:nth-child(3) {
     padding-top: 15px;
-  }
-  .hero .title h3 {
-    font-size: 4.2rem;
-    letter-spacing: 4px;
   }
   .hero p {
     width: 60%;
@@ -107,7 +152,10 @@ html, body {
   }
 }
 @media (min-width: 1080px) {
-  .hero p {
+  .main .hero .title h3 {
+    line-height: 120px;
+  }
+  .main .hero p {
     font-size: 1rem;
     padding: 12px 230px;
   }

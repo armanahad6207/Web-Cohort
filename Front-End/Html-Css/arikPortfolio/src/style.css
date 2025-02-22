@@ -15,7 +15,7 @@ body {
   width: 100%;
   min-height: auto;
   background-color: #0e0e0e;
-  padding: 20px 14px;
+  padding: 20px 44px;
   color: rgb(218, 197, 167);
 }
 .main .hero {
@@ -30,7 +30,6 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 1;
-  animation: imageAnimate 1.3s ease 0.7s forwards;
 }
 @keyframes imageAnimate {
   0% {
@@ -50,7 +49,6 @@ body {
   text-align: center;
   font-weight: 400;
   line-height: 80px;
-  opacity: 1;
   transition: all ease;
 }
 .main .hero .title h3:nth-child(2) {
@@ -62,6 +60,7 @@ body {
 @keyframes textAnimate {
   0% {
     transform: translateX(-10%);
+    opacity: 0;
   }
   100% {
     transform: translateX(0%);
@@ -107,20 +106,43 @@ body {
 }
 .main .x-scroll {
   width: 100%;
-  background-color: red;
-  margin: 1rem 0rem;
+  height: 15rem;
+  padding: 2rem 0rem;
   display: flex;
   overflow-x: hidden;
   position: relative;
 }
+.main .x-scroll::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(to left, #0e0e0e, transparent);
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+.main .x-scroll::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(to right, #0e0e0e, transparent);
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
 .main .x-scroll .scroll-wraper {
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
-  gap: 4rem;
+  gap: 8rem;
   align-items: center;
-  padding: 2rem 3rem;
-  border: 2px solid green;
   animation: scrollAnimate 10s linear infinite;
   white-space: nowrap;
+}
+.main .x-scroll .scroll-wraper svg {
+  font-size: 8rem;
 }
 @keyframes scrollAnimate {
   0% {
@@ -129,6 +151,133 @@ body {
   100% {
     transform: translateX(-100%);
   }
+}
+.main .card-container {
+  display: grid;
+  gap: 1.5rem;
+}
+.main .card-container .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px 20px;
+  border: 1px solid #393430;
+  background: #181716;
+}
+.main .card-container .card .top span {
+  font-size: 1.2rem;
+}
+.main .card-container .card .top h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 8px 0px;
+  text-transform: uppercase;
+}
+.main .card-container .card .bottom {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.main .card-container .card .bottom div, .main .card-container .card .bottom h4 {
+  text-transform: uppercase;
+}
+.main .work {
+  margin: 4rem 0px;
+  width: 100%;
+}
+.main .work .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.main .work .title h2 {
+  font-size: 2.2ssrem;
+  font-weight: 400;
+  border-bottom: 2px solid #393430;
+}
+.main .work .title .tittle-bottom {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main .work .title .tittle-bottom span {
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+.main .work .title .tittle-bottom p {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.main .work .image-container {
+  width: 100%;
+  padding: 2rem 0rem;
+  display: grid;
+  gap: 2rem;
+}
+.main .work .image-container .img {
+  height: clamp(300px, 60vw, 600px);
+  position: relative;
+}
+.main .work .image-container .img:nth-child(1) {
+  background: url(../assets/ClfwTvpSaw5mRTAzBuRlbbRVFXQ.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+.main .work .image-container .img:nth-child(2) {
+  background: url(../assets/d1CAseGSNyShuL2wWI5VggbNto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+.main .work .image-container .img:nth-child(3) {
+  background: url(../assets/Q3JdzgSl7WDRJvNOrxJbf59HFUk.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+.main .work .image-container .img:nth-child(4) {
+  background: url(../assets/ynzulG3fWOPvwVBviGFIhteSSdE.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+.main .work .image-container .img .desc {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  right: 5%;
+  top: 75%;
+  background: rgba(198, 192, 192, 0.132);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.main .work .image-container .img .desc .innerdesc {
+  padding: 0rem 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .work .image-container .img .desc .innerdesc h3 {
+  font-size: 1.4rem;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}
+.main .work .image-container .img .desc .innerdesc h5 {
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 @media (min-width: 620px) {
@@ -158,5 +307,48 @@ body {
   .main .hero p {
     font-size: 1rem;
     padding: 12px 230px;
+  }
+  .main .card-container {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+  }
+  .main .card-container .card {
+    gap: 3.5rem;
+    padding: 4rem 3rem;
+  }
+  .main .card-container .card .top span {
+    font-size: 1.2rem;
+  }
+  .main .card-container .card .top p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 35px;
+  }
+  .main .card-container .card .top h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 8px 0px;
+    text-transform: uppercase;
+  }
+  .main .card-container .card .bottom {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-wrap: nowrap;
+  }
+  .main .card-container .card .bottom div, .main .card-container .card .bottom h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  .main .image-container {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .main .image-container .img .desc .innerdesc h3 {
+    font-size: 4rem;
+  }
+  .main .image-container .img .desc .innerdesc h5 {
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
   }
 }/*# sourceMappingURL=style.css.map */

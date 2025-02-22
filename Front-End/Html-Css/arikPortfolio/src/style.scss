@@ -13,7 +13,7 @@ body {
   width: 100%;
   min-height: auto;
   background-color: #0e0e0e;
-  padding: 20px 14px;
+  padding: 20px 44px;
   color: rgb(218, 197, 167);
   .hero {
     width: 100%;
@@ -27,7 +27,7 @@ body {
       aspect-ratio: 3/4;
       object-fit: cover;
       opacity: 1;
-      animation: imageAnimate 1.3s ease 0.7s forwards;
+      // animation: imageAnimate 1.3s ease 0.7s forwards;
     }
     @keyframes imageAnimate {
       0% {
@@ -49,9 +49,7 @@ body {
       text-align: center;
       font-weight: 400;
       line-height: 80px;
-      opacity: 1;
       transition: all ease;
-
       // animation: textAnimate 2s ease-in-out 1s forwards;
     }
     .title h3:nth-child(2) {
@@ -63,6 +61,7 @@ body {
     @keyframes textAnimate {
       0% {
         transform: translateX(-10%);
+        opacity: 0;
       }
       100% {
         transform: translateX(0%);
@@ -87,48 +86,77 @@ body {
       }
     }
   }
-  .services{
-    display:flex;
-    gap:10px;
-    align-items: center;
-      i{
-        border:1px solid rgb(218, 197, 167);
-        padding: 12px 13px;
-        font-size:1.2rem;
-        border-radius:50%;
-        background-color:#181716;
-        
-      }
-      i:hover{
-        background-color:#393430;
-      cursor: pointer;
-      }
-      span{
-        font-size: 1.2rem;
-        font-weight: 300;
-        text-transform: uppercase;
-      }
-  }
-  .x-scroll{
-    width:100%;
-    background-color: red;
-    margin:1rem 0rem;
+  .services {
     display: flex;
-    overflow-x:hidden;
-    position: relative;
-   
-   
-  
-    .scroll-wraper{
-    
-      display:flex;
-      gap:4rem;
-      align-items: center;
-      padding:2rem 3rem;
-      border:2px solid green;
-      animation: scrollAnimate 10s linear infinite ;
-      white-space: nowrap;
+    gap: 10px;
+    align-items: center;
+    i {
+      border: 1px solid rgb(218, 197, 167);
+      padding: 12px 13px;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      background-color: #181716;
     }
+    i:hover {
+      background-color: #393430;
+      cursor: pointer;
+    }
+    span {
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+  .x-scroll {
+    width: 100%;
+    height:15rem;
+    
+    padding: 2rem 0rem;
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+    
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to left, #0e0e0e, transparent);
+    top: 0;
+    right: 0;
+    z-index: 99;
+    
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right,#0e0e0e, transparent );
+    top: 0;
+    left:0;
+    z-index: 99;
+  }
+
+    .scroll-wraper {
+      width:fit-content;
+     
+      display: flex;
+      gap: 8rem;
+      align-items: center;
+     
+
+      animation: scrollAnimate 10s linear infinite;
+      white-space: nowrap;
+
+      svg{
+        font-size:8rem;
+      }
+    }
+
+   
   }
   @keyframes scrollAnimate {
     0% {
@@ -138,11 +166,152 @@ body {
       transform: translateX(-100%);
     }
   }
+   .card-container{
+      display: grid;
+      
+      gap: 1.5rem;
+      .card{
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         gap: 2rem;
+         padding: 20px 20px;
+         border: 1px solid #393430;
+         background:#181716;
+       .top{
     
-  }
+         span{
+          font-size: 1.2rem;
+          
+         }
+         h2{
+          font-size: 1.8rem;
+          font-weight: 400;
+          padding: 8px 0px;
+          text-transform: uppercase;
+         }
+       }
+       .bottom{
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        div,h4{
+          text-transform: uppercase;
+        }
+       }
+      }
+    }
 
+    .work{
+      margin:4rem 0px;
+      width:100%;
+      .title{
+          display: flex;
+          flex-direction:column;
+          align-items: center;
+          justify-content: center;
+          gap:1.5rem;
+          h2{
+            font-size:2.2ssrem;
+            font-weight:400;
+            border-bottom:2px solid #393430;
+          }
+          .tittle-bottom{
+          
+            width:fit-content;
+            display:flex;
+            align-items: center;
+            gap:.5rem;
+            
+            
+            span{
+            font-size:1.2rem;
+            padding-bottom: 5px;
+           
+            }
+            p{
+              font-size:1.3rem;
+              text-transform:uppercase;
+            }
+          }
+      }
+      .image-container{
+        width:100%;
+        padding: 2rem 0rem;
+        display:grid;
+       
+         gap:2rem;
+        
+        .img{
+             height: clamp(300px, 60vw, 600px);
+        
+         
+           position:relative;
+           &:nth-child(1){
+            background:url(../assets/ClfwTvpSaw5mRTAzBuRlbbRVFXQ.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+          
+           }
+           &:nth-child(2){
+            background:url(../assets/d1CAseGSNyShuL2wWI5VggbNto.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+           }
+           &:nth-child(3){
+            background:url(../assets/Q3JdzgSl7WDRJvNOrxJbf59HFUk.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+           }
+           &:nth-child(4){
+            background:url(../assets/ynzulG3fWOPvwVBviGFIhteSSdE.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+           }
 
-@media (min-width: 620px) {
+           .desc{
+            position:absolute;
+            left:5%;
+            bottom: 5%;
+            right:5%;
+            top:75%;
+            background: rgba(198, 192, 192, 0.132);
+            backdrop-filter: blur(10px);
+            .innerdesc{
+              padding:0rem 1rem;
+              width:100%;
+              height:100%;
+              display:flex;
+              justify-content: space-between;
+              align-items: center;
+              h3{
+                font-size:1.4rem;
+                letter-spacing: 1.5px;
+                font-weight:300;
+              }
+              h5{
+                // font-size:1rem;
+                letter-spacing: 1px;
+                font-weight:300;
+                text-transform:uppercase;
+              }
+            }
+            
+           }
+        }
+      }
+    }
+}
+
+@media (min-width: 620px ) {
   .hero {
     .title h3:nth-child(1) {
       display: inline;
@@ -176,5 +345,64 @@ body {
         padding: 12px 230px;
       }
     }
+    .card-container{
+      grid-template-columns: repeat(3, minmax(280px, 1fr));
+      .card{
+       gap: 3.5rem;
+        padding: 4rem 3rem;
+      .top{
+    
+        span{
+         font-size: 1.2rem;
+         
+        }
+        p{
+         font-size: 1.2rem ;
+         letter-spacing: 1px;
+         line-height: 35px;
+        }
+        h2{
+         font-size: 1.8rem;
+         font-weight: 400;
+         padding: 8px 0px;
+         text-transform: uppercase;
+        }
+      }
+      .bottom{
+       display: flex;
+       gap: 12px;
+       align-items: center;
+       text-wrap: nowrap;
+       div,h4{
+        font-size: 1.3rem;
+        font-weight: 400;
+
+       }
+      }
+     }
+    }
+    .image-container{
+       grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        .img{
+        .desc{
+          .innerdesc{
+            h3{
+              font-size:4rem;
+            }
+            h5{
+              // font-size:1rem;
+              letter-spacing: 1px;
+              font-weight:300;
+              text-transform:uppercase;
+            }
+          }
+        }
+        }
+    }
   }
+ 
 }
+
+
+

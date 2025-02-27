@@ -62,13 +62,17 @@ main .brand .bottom-brand .brand-text p {
   line-height: 1.7rem;
   font-family: monospace;
 }
-main .brand .bottom-brand .brand-seri {
+main .brand .bottom-brand .top-brand {
+  margin-top: auto;
+}
+main .brand .bottom-brand .top-brand .brand-seri {
+  padding: 1.3rem 0rem;
   display: flex;
   justify-content: space-between;
 }
-main .brand .bottom-brand .brand-seri p {
+main .brand .bottom-brand .top-brand .brand-seri p {
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: rgba(0, 0, 0, 0.6);
 }
 main .solutions {
@@ -115,6 +119,125 @@ main .solutions .text-solutions .bottom-text-solution p {
   line-height: 1.8rem;
   font-size: 1.4em;
 }
+main .services {
+  width: 100%;
+}
+main .services .text-service {
+  display: grid;
+  gap: 1rem;
+}
+main .services .text-service h1 {
+  font-size: 3.5em;
+  font-weight: 200;
+}
+main .services .text-service .cards .text-service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .services .text-service .cards .text-service-card .top-card h3 {
+  font-size: 2em;
+  font-weight: 200;
+  padding: 0.5rem 0rem;
+}
+main .services .text-service .cards .text-service-card .top-card p {
+  font-family: monospace;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.2em;
+  line-height: 1.5rem;
+}
+main .services .text-service .cards .text-service-card .bottom-card {
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .services .text-service .cards .text-service-card .bottom-card span:nth-child(1) {
+  font-size: 1.5em;
+  padding: 7px 7px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+}
+main .services .text-service .cards .text-service-card .bottom-card span:nth-child(2) {
+  font-size: 1.1em;
+}
+main .services .img-service {
+  margin: 2rem 0rem;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .services .img-service img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .work {
+  padding: 3rem 0rem;
+  width: 100%;
+}
+main .work .title {
+  width: 100%;
+  padding: 0rem 0rem 2.5rem 0rem;
+}
+main .work .title img {
+  width: 100%;
+}
+main .work .work-image-text {
+  width: 100%;
+  display: grid;
+  gap: 1.3rem;
+}
+main .work .work-image-text .work-image-text-card {
+  width: 100%;
+  display: grid;
+  gap: 0.5rem;
+}
+main .work .work-image-text .work-image-text-card .image1 {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .work .work-image-text .work-image-text-card .image1 img {
+  width: 100%;
+}
+main .work .work-image-text .work-image-text-card .image2 {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: none;
+}
+main .work .work-image-text .work-image-text-card .image2 img {
+  width: 100%;
+}
+main .work .work-image-text .work-image-text-card .text .text-work-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .work .work-image-text .work-image-text-card .text .text-work-card .top-card h3 {
+  font-size: 3em;
+  font-weight: 400;
+  padding: 0.5rem 0rem;
+}
+main .work .work-image-text .work-image-text-card .text .text-work-card .top-card p {
+  font-family: monospace;
+  font-size: 1.4em;
+  line-height: 1.6rem;
+}
+main .work .work-image-text .work-image-text-card .text .text-work-card .bottom-card {
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .work .work-image-text .work-image-text-card .text .text-work-card .bottom-card span:nth-child(1) {
+  font-size: 1.5em;
+  padding: 7px 7px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+}
+main .work .work-image-text .work-image-text-card .text .text-work-card .bottom-card span:nth-child(2) {
+  font-size: 1.1em;
+}
 
 @media (min-width: 1080px) {
   main {
@@ -129,7 +252,6 @@ main .solutions .text-solutions .bottom-text-solution p {
        object-fit: cover;
   }
   main .brand .bottom-brand {
-    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -147,11 +269,11 @@ main .solutions .text-solutions .bottom-text-solution p {
     font-size: 2em;
     line-height: 2rem;
   }
-  main .brand .bottom-brand .brand-seri {
+  main .brand .bottom-brand .top-brand .brand-seri {
     display: flex;
     justify-content: space-between;
   }
-  main .brand .bottom-brand .brand-seri p {
+  main .brand .bottom-brand .top-brand .brand-seri p {
     text-transform: uppercase;
     font-size: 1.6em;
     color: rgba(0, 0, 0, 0.6);
@@ -160,7 +282,7 @@ main .solutions .text-solutions .bottom-text-solution p {
     margin: 5rem 0rem;
     width: 100%;
     flex-direction: row;
-    gap: 4em;
+    gap: 6em;
   }
   main .solutions .img-container {
     width: 35%;
@@ -169,23 +291,95 @@ main .solutions .text-solutions .bottom-text-solution p {
   main .solutions .text-solutions {
     width: 65%;
     flex-direction: row-reverse;
-    gap: 5rem;
+    gap: 17rem;
   }
   main .solutions .text-solutions .bottom-text-solution {
-    gap: 6rem;
+    gap: 7rem;
   }
   main .solutions .text-solutions .bottom-text-solution h3 {
-    font-family: sans-serif;
-    font-size: 5em;
-    font-weight: 400;
-    line-height: 5rem;
-    text-transform: uppercase;
+    font-size: 7em;
+    line-height: 6.5rem;
   }
   main .solutions .text-solutions .bottom-text-solution p {
     writing-mode: initial;
     font-family: monospace;
     color: rgba(0, 0, 0, 0.6);
+    line-height: 2.3rem;
+    font-size: 2em;
+  }
+  main .services {
+    display: flex;
+    gap: 3rem;
+  }
+  main .services hr {
+    display: none;
+  }
+  main .services .text-service {
+    width: 50%;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 6rem;
+    padding: 4rem 0rem;
+  }
+  main .services .text-service h1 {
+    font-size: 10em;
+    line-height: 9rem;
+    font-weight: 400;
+  }
+  main .services .text-service .cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 2rem 3rem;
+  }
+  main .services .text-service .cards .text-service-card {
+    border-top: 1px solid rgba(46, 44, 44, 0.6);
+  }
+  main .services .text-service .cards .text-service-card .top-card p {
+    padding-right: 6rem;
+    text-transform: uppercase;
+    font-size: 1.6em;
+  }
+  main .services .img-service {
+    width: 50%;
+    aspect-ratio: 1/1;
+  }
+  main .work .title {
+    padding: 2rem 0rem 5rem 0rem;
+  }
+  main .work .work-image-text {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1.3rem;
+  }
+  main .work .work-image-text .work-image-text-card {
+    grid-auto-flow: dense;
+    grid-template-columns: 30% 30% 30%;
+    gap: 3rem;
+  }
+  main .work .work-image-text .work-image-text-card:nth-child(2) .text {
+    order: -1;
+  }
+  main .work .work-image-text .work-image-text-card .image2 {
+    display: block;
+  }
+  main .work .work-image-text .work-image-text-card .text .text-work-card {
+    gap: 1rem;
+    padding: 1rem 0rem;
+  }
+  main .work .work-image-text .work-image-text-card .text .text-work-card .top-card h3 {
+    font-size: 6em;
+  }
+  main .work .work-image-text .work-image-text-card .text .text-work-card .top-card p {
+    font-family: monospace;
+    font-size: 1.6em;
     line-height: 1.8rem;
-    font-size: 1.4em;
+  }
+  main .work .work-image-text .work-image-text-card .text .text-work-card .bottom-card span:nth-child(1) {
+    font-size: 1.7em;
+  }
+  main .work .work-image-text .work-image-text-card .text .text-work-card .bottom-card span:nth-child(2) {
+    font-size: 1.5em;
   }
 }/*# sourceMappingURL=style.css.map */

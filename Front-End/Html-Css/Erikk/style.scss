@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -255,8 +256,118 @@ main {
       }
     }
   }
-}
+  .client{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    width:100%;
+    .title{
+     width:100%;
+     img{
+      width: 100%;
+     }
 
+    }
+    .client_name{
+      display: flex;
+      flex-direction: column;
+      gap:1.2rem;
+      .left{
+        display: flex;
+        flex-direction: column;
+        p{
+          font-size: 1.2em;
+          color: #0009;
+        }
+        h5{
+          font-size:2.5em;
+          font-weight: 300;
+        }
+      }
+      p{
+        font-size:1.2em;
+        color:#0009;
+        font-weight:300;
+      }
+    }
+  }
+  
+}
+.footer_brand{
+    width:100%;
+    height:80vh;
+    padding:4em 2em;
+   display:flex;
+   align-items:center;
+   
+   flex-direction:column;
+   gap:1rem;
+    background-color: #000;
+       .title{
+       width:100%;
+       img{
+        width:100%;
+       }
+       }
+
+       h1{
+        
+        color:#fff;
+        font-size:2em;
+        text-align:center;
+        font-weight:400;
+        text-transform: uppercase;
+        font-family:sans-serif;
+        line-height:2.3rem;
+        letter-spacing: 1px;
+       }
+
+       a{
+       background-color: #FFFF;
+      text-decoration: none;
+      font-size: 1em;
+      padding:.8rem 2rem;
+      border-radius:4rem;
+      overflow: hidden;
+      position:relative;
+      .text{
+       text-transform: uppercase;
+       font-family:sans-serif;
+       color:#dd0f0f;
+       display: block;
+       position: relative;
+       transition: transform 1s ease-in-out;
+       
+      
+      }
+      &::before{
+
+        content:"get in touch";
+        position:absolute;
+        top:100%;
+        left:0;
+        text-align: center;
+        width:100%;
+        transition: transform 1s ease-in-out;
+        opacity: 0;
+
+      }
+
+      &:hover{
+        .text{
+          transform: translateY(-150%);
+        }
+        &::before{
+          transform: translateY(-180%);
+          opacity: 1;
+        }
+      }
+      
+       }
+
+
+    }
+  
 @media (min-width: 1080px) {
   main {
     padding: 3rem;
@@ -437,5 +548,22 @@ main {
         }
       }
     }
+    .client{
+    .title{
+    text-align: right;
+    img{
+    width:60%;
+    }
+    }
+
+    padding-left: 25rem;
+    padding-top: 5rem;
+    .client_name{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    }
+    }
+    
   }
 }

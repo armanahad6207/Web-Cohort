@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap:20px;
+    background-color: #000;
+}
+h1{
+  color: white;
+  text-transform: capitalize;
+  font-size: 4em;
+  font-family: sans-serif;
+}
+p{
+    height: 200px;
+    width: 400px;
+    background-color: floralwhite;
+    display: grid;
+    place-items: center;
+    font-size: 6em;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:aliceblue
+}
+button{
+    background-color: orangered;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1.8em;
+    text-transform: capitalize;
+}
+button:active{
+    scale:1.03;
+}
+button:hover{
+    cursor: pointer;
+}

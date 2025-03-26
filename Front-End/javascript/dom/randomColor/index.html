@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random color</title>
+    <style>
+        html,body{
+            height: 100%;
+            width:100%;
+        }
+        main{
+            height:100%;
+            width:100%;
+            display: grid;
+            place-items: center;
+            background-color: rgb(0,0,0);
+
+        }
+        button{
+            font-size: 1.8em;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(26, 26, 244);
+            color: white;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+        button:active{
+            scale: 1.03;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main class="bg">
+        <button id="btn">Change bg Color</button>
+    </main>
+    <script>
+         const btn = document.querySelector("#btn");
+         const bg = document.querySelector(".bg");
+         btn.addEventListener('click',()=>{
+              let red = Math.floor(Math.random()*256);
+              let green = Math.floor(Math.random()*256);
+              let blue = Math.floor(Math.random()*256);
+              
+              bg.style.backgroundColor=`rgb(${red},${green},${green})`
+              console.log(` ${red}, ${green}, ${blue}`)
+         })
+    </script>
+</body>
+</html>

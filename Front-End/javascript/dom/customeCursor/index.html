@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomeCursor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <main class="h-[100vh] w-[100%] bg-red-400 cursor-none overflow-hidden">
+
+        <div class="h-12 w-12 bg-blue-600 absolute  blur " id="customeCursor"></div>
+    </main>
+    <script>
+
+        const cursor=document.querySelector("#customeCursor")
+        document.addEventListener('mousemove',(e)=>{
+
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        })
+    </script>
+</body>
+</html>

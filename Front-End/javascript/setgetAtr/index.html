@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+    main{
+        height: 100%;
+        width: 100%;
+      
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+        
+       
+    }
+    button{
+        padding: 12px 14px;
+        font-family: sans-serif;
+        font-size: 2rem;
+        background-color: crimson;
+        color: rgb(239, 245, 239);
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+    img{
+        object-fit: cover;
+    }
+    button:active{
+        scale: 1.01;
+        background-color: rgb(244, 42, 82);
+    }
+</style>
+<body>
+    <main>
+        <img src="https://images.unsplash.com/photo-1741514374526-8bc710b6b312?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8" alt="" height="600px" width="400px" id="img1">
+        <button>Swap Image</button>
+        <img src="https://images.unsplash.com/photo-1742201581091-68338e9f1669?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8" alt="" height="600px" width="400px" id="img2">
+    </main>
+   <script src="script.js"></script>
+</body>
+</html>

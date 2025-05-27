@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+main{
+    width: 100%;
+    min-height: 100%;
+    background-color:#E55050 ;
+    color:#f4f4f9;  
+    padding: 20px;
+    font-family: monospace;
+    
+}
+
+.card {
+    position: relative;
+    margin: 30px;
+    width: 20rem;
+    height: 28rem;
+    background-image: url('https://media.istockphoto.com/id/157373207/photo/balanced-stones-on-a-pebble-beach-during-sunset.webp?a=1&b=1&s=612x612&w=0&k=20&c=ztFBmSoSiffYbKiIIi60HhnfR0KbPc9excFHh6nROJU=');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display:inline-block;
+  }
+  
+  /* h2 positioned bottom-right */
+  .card h2 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 6px 12px;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    color: white;
+    font-size: 3rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+  }
+  .openCard{
+    padding: 20px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: red;
+        display: none;
+  }
+  .openCard>span{
+    background-color: #000;
+    padding: 12px;
+    color:wheat;
+    font-weight:600;
+    font-size: 1.3rem;
+    text-align: center;
+   vertical-align: bottom;
+   cursor: pointer;
+  }
+  

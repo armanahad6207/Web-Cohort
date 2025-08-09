@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Form UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col items-center p-10">
+
+  <!-- Add User Form -->
+  <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl w-full max-w-2xl mb-12 transform transition duration-500 shadow-blue-500/30">
+    <h2 class="text-2xl font-bold text-center mb-8 tracking-wide">Add User</h2>
+
+    <form class="space-y-6">
+      <div>
+        <label class="block mb-2 text-lg font-medium">Name</label>
+        <input type="text" class="w-full px-4 py-3 bg-gray-800 text-lg rounded-lg outline-none focus:ring-2 focus:ring-blue-500 transition" />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-lg font-medium">Role</label>
+        <input type="text" class="w-full px-4 py-3 bg-gray-800 text-lg rounded-lg outline-none focus:ring-2 focus:ring-blue-500 transition" />
+      </div>
+
+      <div>
+        <label class="block mb-2 text-lg font-medium">Bio</label>
+        <textarea class="w-full px-4 py-3 bg-gray-800 text-lg rounded-lg outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+      </div>
+
+      <div>
+        <label class="block mb-2 text-lg font-medium">Photo URL</label>
+        <input type="text" class="w-full px-4 py-3 bg-gray-800 text-lg rounded-lg outline-none focus:ring-2 focus:ring-blue-500 transition" />
+      </div>
+
+      <button type="submit" class="w-full py-3 bg-blue-600 text-lg rounded-lg hover:bg-blue-700 hover:scale-105 transform transition duration-300">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <!-- User Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl w-full">
+    
+    <!-- Card 1 -->
+    <div class="bg-gray-900 p-8 rounded-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-blue-500/30">
+      <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John Doe" class="w-24 h-24 rounded-full mx-auto mb-4 shadow-lg shadow-blue-500/20">
+      <h3 class="text-xl font-semibold">John Doe</h3>
+      <p class="text-base text-gray-400">Frontend Developer</p>
+      <p class="mt-3 text-gray-300 text-base">Loves building beautiful UIs and learning new technologies.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-gray-900 p-8 rounded-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-blue-500/30">
+      <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Jane Smith" class="w-24 h-24 rounded-full mx-auto mb-4 shadow-lg shadow-blue-500/20">
+      <h3 class="text-xl font-semibold">Jane Smith</h3>
+      <p class="text-base text-gray-400">Backend Engineer</p>
+      <p class="mt-3 text-gray-300 text-base">Enjoys solving complex problems and optimizing APIs.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-gray-900 p-8 rounded-2xl text-center transform transition duration-500 hover:scale-105 hover:shadow-blue-500/30">
+      <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Alex Lee" class="w-24 h-24 rounded-full mx-auto mb-4 shadow-lg shadow-blue-500/20">
+      <h3 class="text-xl font-semibold">Alex Lee</h3>
+      <p class="text-base text-gray-400">UI/UX Designer</p>
+      <p class="mt-3 text-gray-300 text-base">Passionate about user experience and clean design.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
